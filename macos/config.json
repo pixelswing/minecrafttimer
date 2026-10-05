@@ -1,0 +1,8 @@
+{
+  "default_limit_minutes": 60,
+  "webservice_url": "http://SERVER-IP:8787",
+  "api_token": "BITTE-AENDERN",
+  "poll_seconds": 10,
+  "webservice_poll_seconds": 30,
+  "warning_minutes": [10, 5, 1]
+}

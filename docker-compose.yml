@@ -1,0 +1,14 @@
+services:
+  minecraft-timer-web:
+    build: ./webservice
+    container_name: minecraft-timer-web
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Berlin
+      MCTIMER_PORT: "8787"
+      MCTIMER_DEFAULT_MINUTES: "60"
+      MCTIMER_TOKEN: "BITTE-EIN-LANGES-ZUFAELLIGES-TOKEN-EINTRAGEN"
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/data

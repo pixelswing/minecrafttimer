@@ -1,0 +1,16 @@
+[Unit]
+Description=Minecraft daily timer
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /opt/minecraft-timer/minecraft_timer.py
+Restart=on-failure
+RestartSec=10
+StateDirectory=minecraft-timer
+StateDirectoryMode=0700
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
